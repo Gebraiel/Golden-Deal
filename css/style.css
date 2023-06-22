@@ -836,6 +836,7 @@ body {
 }
 video{
   position: fixed !important;
+  opacity: 0.4;
   left:0 !important;
   top:0 !important;
   object-fit: cover !important;
