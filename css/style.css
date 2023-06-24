@@ -131,9 +131,16 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+
 img {
+  width: 250px;
   height: auto;
-  max-width: 100%;
+}
+@media (max-height:699px) {
+  img{
+    width:200px;
+  }
+  
 }
 
 svg {
@@ -1317,7 +1324,6 @@ video{
   padding: 10px 0;
   position: absolute;
   width: 100%;
-  z-index: 1;
 }
 @media (max-width: 991px) {
   .site-footer {
@@ -1369,29 +1375,22 @@ video{
 *******************************************************************************/
 .main {
   height: 100%;
-  overflow: hidden;
-  padding-top: 113px;
-  padding-bottom: 134px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top:100px;
 }
-@media (max-width: 991px) {
-  .main {
-    padding-top: 93px;
-    padding-bottom: 126px;
-  }
-}
+
 @media (max-width: 767px) {
   .main {
-    height: auto;
-    min-height: calc(100% - 117px - 91px);
+    height: 100%;
     padding-top: 0;
     padding-bottom: 0;
-    margin-top:115px;
   }
 }
 .main .section {
   height: 0;
-  overflow: hidden;
   position: absolute;
   table-layout: fixed;
   visibility: hidden;
@@ -1406,7 +1405,6 @@ video{
 }
 .main .section.active {
   height: 100%;
-  height: calc(100% - 113px - 134px);
   visibility: visible;
 }
 @media (max-width: 991px) {
@@ -1427,11 +1425,11 @@ video{
   width: 100%;
 }
 .main .section .section-wrap .section-content {
-  display: table-cell;
+
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  vertical-align: middle;
+
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -1632,6 +1630,13 @@ video{
 .h1-section-title {
   margin-bottom: 20px;
   font-weight: 600;
+}
+@media (max-height:699px) {
+  .h1-section-title{
+      font-size: 45px;
+      margin: 20px;
+  }
+  
 }
 @media (max-width: 991px) {
   .h1-section-title {
